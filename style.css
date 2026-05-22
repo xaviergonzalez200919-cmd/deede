@@ -1,0 +1,106 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+}
+
+body{
+  background:#0b0f1a;
+  color:white;
+  overflow:hidden;
+}
+
+.game{
+  width:100vw;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  padding:20px;
+  background:#111827;
+  font-size:20px;
+  box-shadow:0 0 20px #00ffcc55;
+}
+
+.table{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px;
+}
+
+.hand,
+.played-hand{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.card{
+  width:80px;
+  height:120px;
+  border-radius:12px;
+  background:linear-gradient(145deg,#1f2937,#111827);
+  border:2px solid #00ffcc;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  cursor:pointer;
+  transition:.2s;
+  box-shadow:0 0 15px #00ffcc55;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.05);
+}
+
+.card.selected{
+  border-color:#ff00ff;
+  transform:translateY(-20px);
+  box-shadow:0 0 25px #ff00ff;
+}
+
+.symbol{
+  font-size:28px;
+  font-weight:bold;
+}
+
+.name{
+  font-size:12px;
+  opacity:.8;
+}
+
+button{
+  margin-bottom:20px;
+  padding:15px 30px;
+  border:none;
+  border-radius:12px;
+  background:#00ffcc;
+  color:black;
+  font-weight:bold;
+  cursor:pointer;
+  font-size:18px;
+  transition:.2s;
+}
+
+button:hover{
+  transform:scale(1.05);
+}
+
+@media(max-width:600px){
+
+  .card{
+    width:65px;
+    height:100px;
+  }
+
+}
